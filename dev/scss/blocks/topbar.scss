@@ -1,0 +1,29 @@
+.topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 60vw;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); //Centrar
+    height: 50px;
+    background-color: #666;
+
+    &__icon{
+        width: 90px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include laptod{
+        height: 60px;
+        left: 100%;
+        width: 20vw;
+        justify-content: space-evenly;
+        transform: translateX(-100%); // No desaparezca
+    }
+    @include desktop{
+        width: 15vw;
+    }
+}
