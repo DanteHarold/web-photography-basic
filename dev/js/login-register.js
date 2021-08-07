@@ -11,6 +11,8 @@ if(topbar){
         if(e.target.parentElement.dataset.type != undefined){
             if(e.target.parentElement.dataset.type=='login'){
                 loginModal.classList.add('lightbox--show')
+            }else if(e.target.parentElement.dataset.type=='register'){
+                registerModal.classList.add('lightbox--show')
             }
         }
     })
@@ -22,9 +24,28 @@ if(loginModal){
         }
     })
 }
+if(registerModal){
+    registerModal.addEventListener('click',(e)=>{
+        if(e.target.classList.contains('lightbox')){
+            registerModal.classList.remove('lightbox--show')
+        }
+    })
+}
 
 if(loginForm){
     loginForm.addEventListener('submit',(e)=>{
         e.preventDefault()
+        setTimeout(() => {
+            e.target.button.blur()
+        }, 200);
+
+    })
+}
+if(registerModal){
+    registerModal.addEventListener('submit',(e)=>{
+        e.preventDefault()
+        setTimeout(() => {
+            e.target.button.blur()
+        }, 200);
     })
 }
