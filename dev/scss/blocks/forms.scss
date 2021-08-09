@@ -41,3 +41,39 @@
         }
     }
 }
+.form-contact{
+    display: grid;
+    gap: 30px;
+    width: 320px;
+    margin: 0 auto;
+    justify-content: center;
+    padding-top: 2rem;
+
+    @include laptod{
+        grid-template-columns: repeat(2,1fr);
+        margin: 0 auto 2rem;
+        width:  50%;
+    }
+    &__fields{
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__input,&__textarea{
+        height: 40px;
+        background-color: $dark-color;
+        columns: $text-color;
+        border: 1px solid;
+        outline: none;
+        padding-left: 3.5rem;
+    }
+    &__textarea{
+        resize: none;
+        width: 320px;
+        height: 250px;
+        padding: 0.5rem;
+    }
+
+}
