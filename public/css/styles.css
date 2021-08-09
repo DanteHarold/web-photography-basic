@@ -187,9 +187,9 @@ body { background-color: var(--background-color); color: var(--text-color); min-
 
 .form__label, .form__input { width: 100%; margin-bottom: 1rem; background: none; border: none; outline: none; color: var(--text-color); }
 
-.form__input { margin-bottom: 2rem; border-bottom: 1px solid var(--text-color); }
+.form__input { margin-top: 0.5rem; margin-bottom: 2rem; border-bottom: 1px solid var(--text-color); }
 
-.form__submit { display: inline-block; padding: 0.5rem 1rem; color: var(--text-color); background-color: var(--primary-color); border: none; cursor: pointer; border-radius: .25rem; transition: transform 0.2s; }
+.form__submit { display: inline-block; padding: 0.5rem 1rem; margin-top: 0.5rem; color: var(--text-color); background-color: var(--primary-color); border: none; cursor: pointer; border-radius: .25rem; transition: transform 0.2s; }
 
 .form__submit:active, .form__submit:focus { transform: scale(0.9); }
 
@@ -197,15 +197,26 @@ body { background-color: var(--background-color); color: var(--text-color); min-
 
 @media screen and (min-width: 1024px) { .form-contact { grid-template-columns: repeat(2, 1fr); margin: 0 auto 2rem; width: 50%; } }
 
-.form-contact__fields { display: flex; flex-direction: column; height: 150px; justify-content: space-between; width: 100%; }
+.form-contact__fields { display: flex; flex-direction: column; height: 120px; justify-content: space-between; width: 100%; }
 
-.form-contact__input, .form-contact__textarea { height: 40px; background-color: var(--dark-color); -moz-columns: var(--text-color); columns: var(--text-color); border: 1px solid; outline: none; padding-left: 3.5rem; }
+.form-contact__input, .form-contact__textarea { height: 30px; background-color: var(--dark-color); -moz-columns: var(--text-color); columns: var(--text-color); border: 1px solid; outline: none; padding-left: 0.5rem; }
 
-.form-contact__textarea { resize: none; width: 320px; height: 250px; padding: 0.5rem; }
+.form-contact__textarea { resize: none; width: 320px; height: 150px; padding: 0.5rem; }
 
 .title { padding: 0 0 0 .5rem; border-bottom: 1px solid var(--text-color); text-align: left; }
 
 @media screen and (min-width: 1024px) { .title { padding: 0; padding-bottom: 0.5rem; padding-top: 0.5rem; border-top: 1px solid var(--text-color); } }
+
+.social { width: 80%; position: absolute; bottom: 2rem; display: flex; justify-content: space-between; height: 2em; left: 50%; transform: translateX(-50%); overflow: hidden; }
+
+@media screen and (min-width: 1024px) { .social { margin-top: 3rem; width: 30%; } }
+
+.social__icon { display: flex; flex-direction: column; font-size: 2rem; cursor: pointer; transition: transform 0.2s; }
+
+.social__icon i { align-self: center; }
+
+@media screen and (min-width: 1024px) { .social__icon:hover { transform: translateY(-100%); }
+  .social__icon:hover i:nth-child(2) { color: var(--primary-color); } }
 
 @media screen and (min-width: 1024px) { .about { position: relative; height: 60vh; display: grid; grid-template-columns: 60% 40%; justify-items: center; align-items: center; }
   .about__img, .about__text { position: absolute; width: 50%; top: 0; opacity: 0; transition: opacity 1s; }
@@ -217,6 +228,14 @@ body { background-color: var(--background-color); color: var(--text-color); min-
 
 .controls { width: 50%; margin: 0 auto; font-size: 2rem; display: flex; justify-content: space-between; color: var(--text-color); }
 
-.contact { background-color: var(--dark-color); height: 90vh; text-align: center; }
+.contact { background-color: var(--dark-color); position: relative; height: 120vh; text-align: center; }
 
-@media screen and (min-width: 1024px) { .contact { height: calc(100vh - 250px); position: relative; } }
+@media screen and (min-width: 1024px) { .contact { height: calc(100vh - 250px); } }
+
+.contact__map { width: 100%; text-align: center; }
+
+@media screen and (min-width: 1024px) { .contact__map { width: 50%; margin: 0 auto 2rem; } }
+
+.contact__map iframe { width: 320px; height: 300px; margin-top: 2rem; }
+
+@media screen and (min-width: 1024px) { .contact__map iframe { width: 400px; height: 150px; } }
