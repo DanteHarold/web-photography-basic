@@ -18,12 +18,14 @@
     }
 
     @include laptod{
-        height: 60px;
+        height: 80px;
         left: 100%;
         width: 25vw;
         justify-content: space-evenly;
         transform: translateX(-100%); // No desaparezca
         background-color: transparent;
+        padding-left: 0;
+        padding-right: 1rem;
     }
     @include desktop{
         width: 20vw;

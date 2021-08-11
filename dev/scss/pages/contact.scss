@@ -1,11 +1,15 @@
 .contact{
     background-color: $dark-color;
     position: relative;
-    height: 120vh;
+    height: 100vh;
     text-align: center;
     
     @include laptod {
         height: calc(100vh - 250px);
+        &__img-map{
+            display: none;
+            
+        }
     }
     &__map{
         width: 100%;
@@ -15,13 +19,17 @@
             margin: 0 auto 2rem;
         }
         & iframe{
-            width: 320px;
-            height: 300px;
-            margin-top: 2rem;
+            display: none;
             @include laptod{
-                width: 400px;
+                width: 500px;
                 height: 150px;
+                margin: 1.5rem auto;
+                display: block;
             }
         }
+    }
+    &__img-map{
+        width: 320;
+        margin-top: 2rem;
     }
 }
